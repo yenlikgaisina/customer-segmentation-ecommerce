@@ -1,11 +1,22 @@
 # Customer Segmentation for E-Commerce Churn Prevention
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3-orange)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3-orange?logo=scikit-learn)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-> **Business Question:** Which customer segments in a transnational e-commerce business are at risk of churn, and how can marketing efforts be tailored to retain, nurture, and re-engage them?
+**Problem:** A transnational e-commerce business cannot tell which customers are drifting toward churn — or how to target win-back and retention campaigns effectively.
+
+**Headline result:** K-Means clustering on RFM+ features identifies distinct customer segments from 541,909 UCI Online Retail transactions, enabling targeted retention and win-back strategies for high-value and lapsed groups.
+
+---
+
+## How to Run
+
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+jupyter notebook notebook/customer_segmentation_ecommerce.ipynb
+```
 
 ---
 
@@ -18,33 +29,31 @@ This project applies unsupervised machine learning to segment e-commerce custome
 ## Dataset
 
 | Property | Detail |
-|----------|--------|
-| **Source** | [UCI Machine Learning Repository -- Online Retail](https://archive.ics.uci.edu/dataset/352/online+retail) |
-| **Records** | ~541,909 transaction line items |
-| **Coverage** | UK-based online retailer with international customers |
-| **Period** | December 2010 -- December 2011 |
-| **Access** | Free download, no registration required |
-
-The dataset is downloaded programmatically in the notebook and cached locally as CSV.
+|---|---|
+| Source | UCI Machine Learning Repository — Online Retail |
+| Records | ~541,909 transaction line items |
+| Coverage | UK-based online retailer with international customers |
+| Period | December 2010 — December 2011 |
+| Access | Free download, no registration required |
 
 ---
 
 ## Engineered Features
 
 | Feature | Description |
-|---------|-------------|
-| **Recency** | Days since the customer's most recent purchase |
-| **Frequency** | Total number of unique orders placed |
-| **Monetary (CLV)** | Total revenue generated across all orders |
-| **Avg Unit Price** | Mean price of items purchased |
-| **Basket Size** | Mean items per order |
+|---|---|
+| Recency | Days since the customer's most recent purchase |
+| Frequency | Total number of unique orders placed |
+| Monetary (CLV) | Total revenue generated across all orders |
+| Avg Unit Price | Mean price of items purchased |
+| Basket Size | Mean items per order |
 
 ---
 
 ## Methods
 
 | Stage | Technique | Purpose |
-|-------|-----------|---------|
+|---|---|---|
 | Data cleaning | Remove cancellations, nulls, duplicates | Quality assurance |
 | Feature engineering | RFM+ aggregation to customer level | Behavioural features |
 | Cluster selection | Elbow Method, Silhouette Score, Dendrogram | Optimal k determination |
@@ -60,35 +69,24 @@ All specific metrics (cluster sizes, silhouette scores, PCA variance, segment pr
 
 ---
 
-## What a Business Would Do With This
-
-A marketing or CRM team could use the segment labels to:
-- Invest in loyalty programmes for high-value, high-frequency customers
-- Run targeted win-back campaigns for lapsed/at-risk segments
-- Personalise promotions for growth-potential customers
-- Surface premium products to high average-unit-price segments
-
----
-
 ## Repository Structure
 
 ```
 customer-segmentation-ecommerce/
-|-- notebook/
-|   +-- customer_segmentation_ecommerce.ipynb
-+-- README.md
+├── notebook/
+│   └── customer_segmentation_ecommerce.ipynb
+└── README.md
 ```
 
 ---
 
 ## Skills Demonstrated
 
-`Python` `Pandas` `NumPy` `Scikit-learn` `Matplotlib` `Seaborn` `K-Means` `Hierarchical Clustering` `PCA` `t-SNE` `StandardScaler` `RFM Analysis` `Feature Engineering` `Customer Segmentation` `Unsupervised Learning`
+Python · Pandas · NumPy · Scikit-learn · Matplotlib · Seaborn · K-Means · Hierarchical Clustering · PCA · t-SNE · RFM Analysis · Feature Engineering · Customer Segmentation · Unsupervised Learning
 
 ---
 
 ## Author
 
-**Yenlik Gaisina** | Data & Analytics Consultant
-
-[LinkedIn](https://www.linkedin.com/in/yenlik-gaisina/) | Cambridge Data Science with ML & AI Programme
+**Yenlik Gaisina** | Data and Analytics Consultant
+[LinkedIn](https://linkedin.com/in/yenlik-gaisina) · [Portfolio](https://gaisina.co.uk)
